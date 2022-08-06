@@ -1,0 +1,126 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script><link href="https://feeldreams.github.io/foryou/style.css" rel="stylesheet" type="text/css" /><script src="https://feeldreams.github.io/foryou/script.js"></script>
+<head>
+<title>Script HTML</title>
+
+</head>
+<!-- Edit Wallpaper 
+di background-image URL --><style>
+:root {
+--warna-bg: rgba(8, 19, 212, 0.994); 
+--warna-teks: rgb(255, 255, 255);
+--warna-bingkai: rgba(8, 19, 212, 0.994);
+--bingkai: 8px;
+--gaya-font: 'Ubuntu', sans-serif;
+--gaya-font2: 'Dancing Script', sans-serif;
+}
+</style>
+<body>
+	
+   <!-- Stiker untuk Popup --><div id="pesanstiker">
+		<img id="stiker1" src="https://feeldreams.github.io/gigitin.gif"/>
+		<img id="stiker2" src="https://feeldreams.github.io/cilukba.gif"/>
+		<img id="stiker3" src="https://feeldreams.github.io/g5.gif"/> 
+		<img id="stiker4" src="https://feeldreams.github.io/lompatin.gif"/>
+	</div>
+	
+   <!-- Ganti Audio di sini --><audio id="linkmp3">https://github.com/stevenpolapa/stepol.github.io/raw/main/Coldplay%20%20Fix%20You%20Live%20In%20Sa%CC%83o%20Paulo.mp3</audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="https://i.pinimg.com/236x/8e/50/36/8e5036acc1e48f40e9b60b6e034bb9a7.jpg" id="wallpaper" width="100%" height="100%"/><div id="beneranblur"></div>
+   </div>
+
+   <div id='Content'>
+   	
+     <div id="suratin" onClick="memulai();audio.play();">
+       <!-- Tombol Surat --><img src="https://media.giphy.com/media/duuOhKVbKQO8B4YcYB/giphy.gif"/>
+     </div>
+     <p id="ket">Buka suratnya!</p>
+   
+     <div><!-- Foto Akhir --><img src="https://feeldreams.github.io/tos.gif" id="fotoakhir"/></div>
+     <div><blockquote id='bq'>
+       <p id="kalimat"></p>
+       <p id="kalimatb"></p>
+       <p id="kalimatc"></p>
+     </blockquote></div>
+   
+     <!-- Tombol -->
+     <div id="Tombol">
+       <a id="By" onClick="multifungsi()">
+         <b id="tmbl">Mau</b>
+       </a>
+       <b id='buttonv2'></b>
+       <a id="Bn" onClick="tolak()">Ndak ah</a>
+     </div>
+     
+   </div>
+
+<!-- Jangan Edit Bagian Ini --><script>
+  function showDiv() {Content.style = "opacity:1;margin-top:15vh;";ket.style="margin-top:30px";}
+  function memulai(){suratin.style="transition:all 1s ease;transform:scale(.1);opacity:0";ket.style="transition:all 1s ease;transform:scale(.1);opacity:0";setTimeout(pesan,300)}
+  function kpemb() {bodyblur.style="opacity:.7;animation:none";beneranblur.style="-webkit-backdrop-filter:blur(5px); backdrop-filter:blur(5px)";wallpaper.style="transform: scale(1.8)";suratin.style="display:none";ket.style="display:none";fotoakhir.style="display:inline-flex;";setTimeout(ftmuncul,100);Content.style = "opacity:1;margin-top:2vh;";bq.style = "opacity:1;visibility:visible;margin-top:5px";setTimeout(ngetik,500)}
+  function ftmuncul(){fotoakhir.style.transform="scale(1)";fotoakhir.style.opacity="1";}
+  function tombol(){Tombol.style="margin-top:15px;opacity:1;transform: scale(1);";Bn.style="margin:12px 0 12px 12px";ftom=1;} ftom=0; function fakhiran(){document.getElementById("akhiran").style = "display:inline-flex";}
+  const swalst = Swal.mixin({timer: 4000, allowOutsideClick: false, showConfirmButton: false, timerProgressBar: true, imageWidth: 100, imageHeight: 100,}); audio = new Audio('' + linkmp3.innerHTML);const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040', imageWidth: 100, imageHeight: 100,}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+  function multifungsi(){if(ftom==1){jawab();} if(ftom==5){menuju();}}
+  function otomatis() {befanimkata();setTimeout(animkata,300);} function befanimkata(){kalimatc.style="transform:scale(.3);";} function animkata() {kalimatc.style="transform:scale(1);";}
+  function otomatis2() {befanimkata2();setTimeout(animkata2,700);} function befanimkata2(){kalimat.style.opacity="0";kalimatb.style.opacity="0";} function animkata2() {kalimat.innerHTML = pesanakhir1;kalimatb.innerHTML = pesanakhir2;kalimat.style.opacity="1";kalimatb.style.margin="30px";kalimatb.style.opacity="1";}
+
+  function kemunculan(){otomatis();kalimatc.innerHTML = ktbwh2;setTimeout(kemunculan2,2200);} function kemunculan2(){otomatis();kalimatc.innerHTML = ktbwh3;setTimeout(kemunculan3,2200);} function kemunculan3(){otomatis();kalimatc.innerHTML = katangetik2;setTimeout(kemunculan,2200);}
+  var aa=0,katangetik;function ngetik() {if(aa<katangetik.length){kalimat.innerHTML += katangetik.charAt(aa);aa++;setTimeout(ngetik,80);} if(aa==katangetik.length){fungsi=1;setTimeout(tombol,300);}}
+  var ai=0,katangetik2;function ngetik2() {if(ai<katangetik2.length){kalimatc.innerHTML += katangetik2.charAt(ai);ai++;setTimeout(ngetik2,100);} if(ai==katangetik2.length){kalimatc.style.animation="rto 1s infinite alternate";setTimeout(stakhir,1000);}}
+  function sbakhir(){kalimatc.style = "opacity:1;transform: scale(1);margin-top:30px";Bn.style.display="none";} function stakhir(){tmbl.innerHTML="Kirim Pesan";tmbl.style="font-size:12px";Tombol.style="margin-top:10px;opacity:1;transform: scale(1)";ftom=5;fungsi=0;}
+  async function menuju(){await swals.fire('OK!', 'Kirim pesan ke WhatsApp aku, ya!', 'success');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;Tombol.style="margin-top:15px;opacity:1;transform: scale(1);";} setTimeout(showDiv,100);
+  async function jawab(){setInterval(createHeart,200);bodyblur.style="opacity:.5;animation:none";beneranblur.style="-webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px)";wallpaper.style="transform: scale(1)";Tombol.style="opacity:0;transform: scale(.1);";setTimeout(sbakhir,3000);setTimeout(ngetik2,3100);otomatis2();}
+
+  flag=1;flagg=1;fungsi=0;
+  function tolak(){
+  	if(fungsi==1){
+  	if(flagg==1){Bn.style="margin-left:90px;transform: rotate(45deg)";buttonv2.style="opacity:1;";By.style="opacity:0";document.getElementById("buttonv2").innerHTML = tekstolak1;flagg=2}
+  	    else if(flagg==2){Bn.style="margin-left:111px;transform: rotate(135deg)";document.getElementById("buttonv2").innerHTML = tekstolak2;flagg=3}
+  		else if(flagg==3){Bn.style="margin:12px 0 12px 12px;transform: rotate(0)";buttonv2.style="opacity:0;";By.style="opacity:1";flagg=1}
+  	    }
+   }
+   tekstolak1 = "Woh &#129315;";tekstolak2 = "harus mau dong. &#129322;";
+</script> <!-- Sampai Sini -->
+
+<!-- Ganti Kata² di bawah ini ya
+1) Upload foto ke https://postimages.org
+     buat dapetin linknya
+2) Ganti Lagu Upload ke replit.com
+     atau bisa juga ke mailboxdrive.com
+3) Merasa kesulitan? DM IG: @rayyarrr -->
+
+<script type="text/javascript">
+      async function pesan(){
+             await swalst.fire({
+                    title: 'Hi. apa kabar? ❤️', 
+                    imageUrl: '' + stiker1.src,
+                  });
+                  
+                  await swalst.fire({
+                    title: 'semoga sehat-sehat selalu ya', 
+                    imageUrl: '' + stiker2.src,
+                  });
+                  
+                  await swalst.fire({
+                    title: 'Oh iya, ada kabar bagus nih 🤭', 
+                    imageUrl: '' + stiker3.src,
+                  });
+                  
+                  await swalst.fire({
+                    title: 'Jujur, dari dulu aku suka kamu 👉🏻👈🏻', 
+                    imageUrl: '' + stiker4.src,
+                  });
+                   	
+             katangetik = "Mau ndak jadi pacarku? 🤭❤️";
+             pesanakhir1 = "Yuhuuu. thankyou yaaa";
+             pesanakhir2 = "Catat tanggal jadian kita ya: <br> 📅 " + today + "!";
+             katangetik2 = "I love You ❤️";
+                      
+             pesanwhatsapp = "Aku mau kok jadi pacar kamu ><";kpemb();
+       }
+</script>
+<script># body = document.querySelector("body");function createHeart() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);</script>
+</body>
+</html>
